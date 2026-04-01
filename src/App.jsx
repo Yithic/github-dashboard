@@ -50,22 +50,22 @@ function App() {
   };
 
   return (
-    <div>
-      <h1>GitHub Dashboard</h1>
+  <div className="container">
+    <h1 className="title">GitHub Dashboard </h1>
 
-      <SearchBar onSearch={handleSearch} />
+    <SearchBar onSearch={handleSearch} />
 
-      <HistoryList
-        history={history}
-        onSelect={handleSearch}
-        onDelete={deleteHistory}
-        onClear={clearHistory}
-      />
+    <HistoryList
+      history={history}
+      onSelect={handleSearch}
+      onDelete={deleteHistory}
+      onClear={clearHistory}
+    />
 
-      <ProfileCard user={user} />
-      <InsightsPanel repos={repos} />
-      <RepoList repos={repos} />
-    </div>
+    <ProfileCard user={user} />
+    <InsightsPanel repos={repos} />
+    <RepoList repos={repos} />
+  </div>
   );
 }
 

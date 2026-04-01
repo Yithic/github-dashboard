@@ -5,18 +5,23 @@ const SearchBar = ({ onSearch }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!username) return;
-    onSearch(username);
+
+    if (!username.trim()) return;
+
+    onSearch(username.trim());
     setUsername("");
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="flex">
       <input
+        type="text"
+        placeholder="Search GitHub username..."
         value={username}
         onChange={(e) => setUsername(e.target.value)}
-        placeholder="Enter GitHub username"
+        style={{ flex: 1 }}
       />
+
       <button type="submit">Search</button>
     </form>
   );

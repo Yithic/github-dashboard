@@ -18,13 +18,13 @@ const InsightsPanel = ({ repos }) => {
   );
 
   return (
-    <div>
-      <h3>Insights</h3>
-      <p>Total Stars: {totalStars}</p>
-      <p>Top Language: {topLang}</p>
-      <p>Total Repos: {repos.length}</p>
-    </div>
-  );
+  <div className="card">
+    <h3>Insights</h3>
+    <p>Total Stars: {totalStars}</p>
+    <p>Top Language: {topLang}</p>
+    <p>Total Repos: {repos.length}</p>
+  </div>
+);
 };
 
 export default InsightsPanel;
